@@ -19,22 +19,22 @@ for i in inputData:
         for k in j:
             if "red" in k:
                 k = k.replace(" red","")
-                tmp[0] += int(k[0:])
+                tmp[0] += int(k)
             elif "green" in k:
                 k = k.replace(" green","")
-                tmp[1] += int(k[0:])
+                tmp[1] += int(k)
             else:
                 k = k.replace(" blue","")
-                tmp[2] += int(k[0])
+                tmp[2] += int(k)
         subsetsSorted.append(tmp)
 
     possible = []
 
     for j in subsetsSorted:
-        if j[0] < 12 and j[1] < 13 and j[2] < 14:
+        if j[0] <= 12 and j[1] <= 13 and j[2] <= 14:
             possible.append(int(gameId))
 
     if len(possible) == len(subsetsSorted):
         result += int(gameId)
-    print(possible)
+    print(possible, gameId)
 print(result)
