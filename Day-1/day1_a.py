@@ -1,4 +1,4 @@
-file = open("day1.txt")
+file = open("Day-1/day1.txt")
 inputData = [x.replace("\n", "") for x in file.readlines()]
 file.close()
 
