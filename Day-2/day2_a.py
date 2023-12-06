@@ -27,7 +27,6 @@ for i in inputData:
                 k = k.replace(" blue","")
                 tmp[2] += int(k)
         subsetsSorted.append(tmp)
-
     possible = []
 
     for j in subsetsSorted:
@@ -36,5 +35,4 @@ for i in inputData:
 
     if len(possible) == len(subsetsSorted):
         result += int(gameId)
-    print(possible, gameId)
 print(result)
